@@ -10,6 +10,9 @@ import (
 )
 
 func main() {
+	var multiLineString string = `this is very interesting how the 
+	string can be in several lines
+	huh!`
 	fmt.Print("Enter your grade: ")
 	reader := bufio.NewReader(os.Stdin)
 	input, err := reader.ReadString('\n')
@@ -18,4 +21,6 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Print("You entered ", input)
+	fmt.Print(multiLineString)
+
 }
