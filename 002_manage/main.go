@@ -7,20 +7,33 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strconv"
+	"strings"
 )
 
 func main() {
-	var multiLineString string = `this is very interesting how the 
-	string can be in several lines
-	huh!`
 	fmt.Print("Enter your grade: ")
 	reader := bufio.NewReader(os.Stdin)
 	input, err := reader.ReadString('\n')
+
 	// trying to process the error if any
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Print("You entered ", input)
-	fmt.Print(multiLineString)
+
+	input = strings.TrimSpace(input)
+	grade, err := strconv.ParseFloat(input, 64)
+
+	if err != nil {
+		log.Fatal(err)
+	}
+	var status string
+	if grade >= 60 {
+		status := "passing"
+	} else {
+		status := "failing"
+	}
+
+	fmt.Print("Your grade", grade, "is", status)
 
 }
