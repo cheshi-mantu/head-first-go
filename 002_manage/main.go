@@ -29,11 +29,11 @@ func main() {
 	}
 	var status string
 	if grade >= 60 {
-		status := "passing"
+		status = "passing"
 	} else {
-		status := "failing"
+		status = "failing"
 	}
 
-	fmt.Print("Your grade", grade, "is", status)
+	fmt.Print("Your grade ", grade, " is ", status)
 
 }
