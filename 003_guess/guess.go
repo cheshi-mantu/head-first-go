@@ -11,14 +11,13 @@ import (
 	"time"
 )
 
+// guess challenges the end user to guess a number
 func main() {
 	seconds := time.Now().Unix()
 	fmt.Println(seconds)
 	rand.Seed(seconds)
 	target := rand.Intn(100) + 1
-	fmt.Println("We've chosen a random number between 1 and 100")
-	fmt.Println("Can you guess it?")
-	fmt.Println(target)
+	fmt.Println("We've chosen a random number between 1 and 100. Can you guess it?")
 
 	reader := bufio.NewReader(os.Stdin)
 	success := false
