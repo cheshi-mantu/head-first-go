@@ -10,12 +10,7 @@ func main() {
 	height = 3.0
 	area = width * height
 
-	fmt.Println(area/10, "litres needed.")
-
-	width = 5.2
-	height = 3.5
-	area = width * height
-
-	fmt.Println(area/10, "litres needed.")
-
+	resultString := fmt.Sprintf("About %0.2f\n", area)
+	fmt.Println(resultString)
+	fmt.Printf("%12s|%s\n", "hello", "bye")
 }
