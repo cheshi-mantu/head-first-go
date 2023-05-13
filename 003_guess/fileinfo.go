@@ -14,6 +14,6 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println("file ", fileinfo.Name(), "size is", fileinfo.Size())
+	fmt.Println("file", fileinfo.Name(), "size is", fileinfo.Size())
 
 }
