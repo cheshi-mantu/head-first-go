@@ -25,6 +25,7 @@ func main() {
 	grade, err := strconv.ParseFloat(input, 64)
 
 	if err != nil {
+		fmt.Println("Entered value is not a number")
 		log.Fatal(err)
 	}
 	var status string
