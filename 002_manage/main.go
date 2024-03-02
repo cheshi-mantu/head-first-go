@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"reflect"
 	"strconv"
 	"strings"
 )
@@ -25,7 +26,7 @@ func main() {
 	grade, err := strconv.ParseFloat(input, 64)
 
 	if err != nil {
-		fmt.Println("Entered value is not a number")
+		fmt.Println("Entered value is not a number but", reflect.TypeOf(input))
 		log.Fatal(err)
 	}
 	var status string
