@@ -29,13 +29,12 @@ func main() {
 		fmt.Println("Entered value is not a number but", reflect.TypeOf(input))
 		log.Fatal(err)
 	}
-	var status string
-	if grade >= 60 {
-		status = "passing"
+
+	if grade == 100 {
+		fmt.Println("Perfect!")
+	} else if grade >= 60 {
+		fmt.Println("Ypu passed")
 	} else {
-		status = "failing"
+		fmt.Println("You've failed with such grade")
 	}
-
-	fmt.Print("Your grade ", grade, " is ", status)
-
 }
